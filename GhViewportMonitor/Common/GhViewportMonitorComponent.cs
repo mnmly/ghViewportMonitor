@@ -35,7 +35,7 @@ namespace MNML
         Timer timer = null;
 
         public ViewportMonitorComponent()
-            : base("Monitor Viewport", "Minitor Viewport Info and send via WebSocket",
+            : base("Monitor Viewport", "Monitor Viewport",
             "Retrieve the Viewport Info and send it to socket connection",
                    "MNML", "Communication")
         {

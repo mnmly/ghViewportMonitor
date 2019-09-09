@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GhViewportMonitor", "GhViewportMonitor\GhViewportMonitor.csproj", "{8E4024FC-3961-4A1A-A5E3-B3788D336299}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GhViewportMonitor.Win", "GhViewportMonitor\GhViewportMonitor.Win.csproj", "{8E4024FC-3961-4A1A-A5E3-B3788D336299}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ghViewportMonitorWin", "ghViewportMonitorWin\ghViewportMonitorWin.csproj", "{62FEECE6-1A79-41DE-AA62-3593775C09C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GhViewportMonitor.Mac", "GhViewportMonitor\GhViewportMonitor.Mac.csproj", "{7C82AC8E-D320-4484-8D50-721A24B607F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,10 +16,10 @@ Global
 		{8E4024FC-3961-4A1A-A5E3-B3788D336299}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E4024FC-3961-4A1A-A5E3-B3788D336299}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E4024FC-3961-4A1A-A5E3-B3788D336299}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62FEECE6-1A79-41DE-AA62-3593775C09C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62FEECE6-1A79-41DE-AA62-3593775C09C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62FEECE6-1A79-41DE-AA62-3593775C09C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62FEECE6-1A79-41DE-AA62-3593775C09C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C82AC8E-D320-4484-8D50-721A24B607F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C82AC8E-D320-4484-8D50-721A24B607F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C82AC8E-D320-4484-8D50-721A24B607F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C82AC8E-D320-4484-8D50-721A24B607F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
