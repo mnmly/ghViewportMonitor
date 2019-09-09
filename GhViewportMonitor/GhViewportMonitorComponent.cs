@@ -29,6 +29,7 @@ namespace MNML
         /// 
         public CameraInfo prevCameraInfo = new CameraInfo();
         String cameraName = null;
+        double scaleFactor = 0.001;
         WebSocket socket = null;
         double intervalMilliseconds = 1000.0;
         Timer timer = null;
@@ -70,6 +71,7 @@ namespace MNML
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
             pManager.AddGenericParameter("Socket", "S", "WebSocketClient", GH_ParamAccess.item);
+            pManager.AddNumberParameter("Scale Factor", "F", "Scale Factor", GH_ParamAccess.item, 0.001);
             pManager.AddTextParameter("Camera Name", "CN", "Camera name in blender", GH_ParamAccess.item, "RhinoCamera");
             pManager.AddNumberParameter("Monitor Interval (ms)", "I", "Camera monitor interval", GH_ParamAccess.item, 1000.0);
         }
@@ -90,8 +92,9 @@ namespace MNML
         {
             double _intervalMilliseconds = 1000.0;
             if (!DA.GetData(0, ref socket)) { socket = null; }
-            if (!DA.GetData(1, ref cameraName)) { cameraName = null; }
-            DA.GetData(2, ref _intervalMilliseconds);
+            DA.GetData(1, ref scaleFactor);
+            if (!DA.GetData(2, ref cameraName)) { cameraName = null; }
+            DA.GetData(3, ref _intervalMilliseconds);
 
             if (_intervalMilliseconds != intervalMilliseconds)
             {
@@ -113,8 +116,8 @@ namespace MNML
                 {
                     Name = cameraName,
                     FocalLength = vp.Camera35mmLensLength,
-                    Position = new List<double> { vp.CameraLocation.X, vp.CameraLocation.Y, vp.CameraLocation.Z },
-                    Target = new List<double> { vp.CameraTarget.X, vp.CameraTarget.Y, vp.CameraTarget.Z },
+                    Position = new List<double> { vp.CameraLocation.X * scaleFactor, vp.CameraLocation.Y * scaleFactor, vp.CameraLocation.Z * scaleFactor },
+                    Target = new List<double> { vp.CameraTarget.X * scaleFactor, vp.CameraTarget.Y * scaleFactor, vp.CameraTarget.Z * scaleFactor },
                     Aspect = vp.FrustumAspect
                 };
 
